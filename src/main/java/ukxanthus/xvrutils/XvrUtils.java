@@ -9,6 +9,7 @@ public final class XvrUtils extends JavaPlugin {
         // Plugin startup logic
         System.out.println("XvrUtils has been enabled!");
         this.getCommand("rules").setExecutor(new CommandRules());
+        this.getCommand("spawn").setExecutor(new CommandSpawn());
     }
 
     @Override

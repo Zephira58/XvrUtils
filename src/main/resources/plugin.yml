@@ -11,7 +11,7 @@ commands:
         description: Tells you the server rules!
         usage: /<command>
         permission: xvrutils.rules
-    rtp:
-        description: Teleports you to a random location
+    spawn:
+        description: Teleports you to spawn
         usage: /<command>
         permission: xvrutils.spawn
