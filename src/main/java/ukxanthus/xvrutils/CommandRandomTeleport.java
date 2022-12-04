@@ -23,8 +23,10 @@ public class CommandRandomTeleport implements CommandExecutor {
             World world = player.getWorld();
             //Generate a random number between 0 and 1000
             Random random = new Random();
+            //Assign y a random number between 50 and 1000
+            int y = random.nextInt(1000) + 50;
             int x = random.nextInt(4000);
-            int z = random.nextInt(4000);
+            int z = random.nextInt(4000) - 7304;
             //Set the player's location to the random location
             location.setX(x);
             location.setY(85);
