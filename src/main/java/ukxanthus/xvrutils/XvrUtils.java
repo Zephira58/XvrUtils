@@ -12,6 +12,7 @@ public final class XvrUtils extends JavaPlugin {
         logger.info("XvrUtils has been enabled!");
         this.getCommand("rules").setExecutor(new CommandRules());
         this.getCommand("spawn").setExecutor(new CommandSpawn());
+        this.getCommand("rtp").setExecutor(new CommandRandomTeleport());
     }
 
     @Override

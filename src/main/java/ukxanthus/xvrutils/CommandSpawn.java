@@ -14,7 +14,7 @@ public class CommandSpawn implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 player.teleport(player.getWorld().getSpawnLocation());
-                player.sendMessage(ChatColor.GREEN + "You have been teleported to spawn!");
+                player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to spawn!");
                 logger.info(sender.getName() + " has used the /spawn command! Teleporting to spawn...");
                 return true;
             } else {
