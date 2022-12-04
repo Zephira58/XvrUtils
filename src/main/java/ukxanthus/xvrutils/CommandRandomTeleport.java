@@ -12,7 +12,6 @@ import java.util.logging.*;
 
 public class CommandRandomTeleport implements CommandExecutor {
     Logger logger = Logger.getLogger(XvrUtils.class.getName());
-    @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         //Detect if the sender is a player
         if (sender instanceof Player) {
