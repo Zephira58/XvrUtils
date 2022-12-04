@@ -23,8 +23,8 @@ public class CommandRandomTeleport implements CommandExecutor {
             World world = player.getWorld();
             //Generate a random number between 0 and 1000
             Random random = new Random();
-            int x = random.nextInt(1000);
-            int z = random.nextInt(1000);
+            int x = random.nextInt(4000);
+            int z = random.nextInt(4000);
             //Set the player's location to the random location
             location.setX(x);
             location.setY(85);
@@ -32,12 +32,12 @@ public class CommandRandomTeleport implements CommandExecutor {
             player.teleport(location);
             //Send the player a message
             player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to " + x + ", " + z);
-            logger.info(sender.getName() + " has used the /rtp command! Teleporting to " + x + ", " + z);
+            logger.info("[XVR Utils] " + sender.getName() + " has used the /rtp command! Teleporting to " + x + ", " + z);
             return true;
         } else {
             //If the sender is not a player, send a message
             sender.sendMessage(ChatColor.GREEN + "[XVR Utils]" + ChatColor.RED + "You must be a player to use this command!");
-            logger.info("A non-player has tried to use the /rtp command!");
+            logger.info("[XVR Utils] A non-player has tried to use the /rtp command!");
             return false;
         }
     }

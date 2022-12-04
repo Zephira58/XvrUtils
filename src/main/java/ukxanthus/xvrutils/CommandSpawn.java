@@ -15,11 +15,11 @@ public class CommandSpawn implements CommandExecutor {
                 Player player = (Player) sender;
                 player.teleport(player.getWorld().getSpawnLocation());
                 player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to spawn!");
-                logger.info(sender.getName() + " has used the /spawn command! Teleporting to spawn...");
+                logger.info("[XVR Utils] " + sender.getName() + " has used the /spawn command! Teleporting to spawn...");
                 return true;
             } else {
                 sender.sendMessage("You must be a player to use this command!");
-                logger.info("A non-player has tried to use the /spawn command!");
+                logger.info("[XVR Utils] A non-player has tried to use the /spawn command!");
                 return true;
             }
     }
