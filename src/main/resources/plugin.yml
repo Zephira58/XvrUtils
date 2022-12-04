@@ -7,7 +7,11 @@ authors: [ Xanthus58 ]
 description: A collection of utilites custom coded for my XVR server
 website: https://xanthus.uk/
 commands:
-    hello:
-        description: Gives you a kit
+    rules:
+        description: Tells you the server rules!
         usage: /<command>
-        permission: xvrutils.kit
+        permission: xvrutils.rules
+    rtp:
+        description: Teleports you to a random location
+        usage: /<command>
+        permission: xvrutils.spawn
