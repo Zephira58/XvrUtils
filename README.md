@@ -1,0 +1,1 @@
+Hello and welcome to xvrUtils this is just going to be a very small project to learn minecraft spigot plugin development. This plugin will contain custom coded commands and features for my personal minecraft server
