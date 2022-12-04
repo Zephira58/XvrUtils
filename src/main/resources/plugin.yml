@@ -2,7 +2,7 @@ name: XvrUtils
 version: '${project.version}'
 main: ukxanthus.xvrutils.XvrUtils
 api-version: 1.19
-prefix: [ XVR ]
+prefix: XVR
 authors: [ Xanthus58 ]
 description: A collection of utilites custom coded for my XVR server
 website: https://xanthus.uk/
