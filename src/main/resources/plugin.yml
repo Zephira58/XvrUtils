@@ -22,4 +22,4 @@ commands:
   warp:
     description: Teleports to various locations
     usage: /<command> <location>
-    permission: xvrutils.prank
+    permission: xvrutils.warp
