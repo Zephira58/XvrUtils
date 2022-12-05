@@ -1,13 +1,15 @@
-package ukxanthus.xvrutils;
+package ukxanthus.xvrutils.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import ukxanthus.xvrutils.XvrUtils;
 
 import java.util.Properties;
 import java.util.logging.Logger;
 
+@SuppressWarnings("ALL")
 public class RulesCommand implements CommandExecutor {
     Logger logger = Logger.getLogger(XvrUtils.class.getName());
 

@@ -1,26 +1,24 @@
-package ukxanthus.xvrutils;
+package ukxanthus.xvrutils.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import ukxanthus.xvrutils.XvrUtils;
 
-import java.util.Properties;
 import java.util.Random;
 import java.util.logging.Logger;
 
+@SuppressWarnings("ALL")
 public class RandomTeleportCommand implements CommandExecutor {
-    Properties props = new Properties();
     Logger logger = Logger.getLogger(XvrUtils.class.getName());
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             Location location = player.getLocation();
-            World world = player.getWorld();
 
             Random random = new Random();
             int x = random.nextInt(4000);
