@@ -1,16 +1,17 @@
 package ukxanthus.xvrutils.commands.teleportsubcommands;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.World;
 import org.bukkit.entity.Player;
 import ukxanthus.xvrutils.XvrUtils;
 import ukxanthus.xvrutils.commands.SubCommand;
 
 import java.util.Properties;
-import java.util.logging.*;
+import java.util.logging.Logger;
 
 public class SpawnCommand extends SubCommand {
+    Properties props = new Properties();
+    Logger logger = Logger.getLogger(XvrUtils.class.getName());
+
     public String getName() {
         return "spawn";
     }
@@ -23,8 +24,6 @@ public class SpawnCommand extends SubCommand {
         return "/warp spawn";
     }
 
-    Properties props = new Properties();
-    Logger logger = Logger.getLogger(XvrUtils.class.getName());
     public void perform(Player player, String[] args) {
         if (player instanceof Player) {
             player.teleport(player.getWorld().getSpawnLocation());

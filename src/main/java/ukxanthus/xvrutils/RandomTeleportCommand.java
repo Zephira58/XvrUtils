@@ -10,11 +10,12 @@ import org.bukkit.entity.Player;
 
 import java.util.Properties;
 import java.util.Random;
-import java.util.logging.*;
+import java.util.logging.Logger;
 
 public class RandomTeleportCommand implements CommandExecutor {
     Properties props = new Properties();
     Logger logger = Logger.getLogger(XvrUtils.class.getName());
+
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;

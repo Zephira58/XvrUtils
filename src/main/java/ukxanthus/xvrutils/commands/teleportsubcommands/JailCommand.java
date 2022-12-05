@@ -8,9 +8,12 @@ import ukxanthus.xvrutils.XvrUtils;
 import ukxanthus.xvrutils.commands.SubCommand;
 
 import java.util.Properties;
-import java.util.logging.*;
+import java.util.logging.Logger;
 
 public class JailCommand extends SubCommand {
+    Properties props = new Properties();
+    Logger logger = Logger.getLogger(XvrUtils.class.getName());
+
     public String getName() {
         return "jail";
     }
@@ -23,8 +26,6 @@ public class JailCommand extends SubCommand {
         return "/warp jail";
     }
 
-    Properties props = new Properties();
-    Logger logger = Logger.getLogger(XvrUtils.class.getName());
     public void perform(Player player, String[] args) {
         if (args.length == 1) {
             Location location = player.getLocation();

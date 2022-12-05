@@ -13,7 +13,7 @@ public class TeleportManager implements CommandExecutor {
 
     private ArrayList<SubCommand> subcommands = new ArrayList<>();
 
-    public TeleportManager(){
+    public TeleportManager() {
         subcommands.add(new RoofCommand());
         subcommands.add(new EndCommand());
         subcommands.add(new CasinoCommand());
@@ -24,18 +24,18 @@ public class TeleportManager implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if (sender instanceof Player){
+        if (sender instanceof Player) {
             Player p = (Player) sender;
 
-            if (args.length > 0){
-                for (int i = 0; i < getSubcommands().size(); i++){
-                    if (args[0].equalsIgnoreCase(getSubcommands().get(i).getName())){
+            if (args.length > 0) {
+                for (int i = 0; i < getSubcommands().size(); i++) {
+                    if (args[0].equalsIgnoreCase(getSubcommands().get(i).getName())) {
                         getSubcommands().get(i).perform(p, args);
                     }
                 }
-            }else if(args.length == 0){
+            } else if (args.length == 0) {
                 p.sendMessage(ChatColor.GREEN + "-Commands-\n");
-                for (int i = 0; i < getSubcommands().size(); i++){
+                for (int i = 0; i < getSubcommands().size(); i++) {
                     p.sendMessage(getSubcommands().get(i).getSyntax() + " - " + getSubcommands().get(i).getDescription());
                 }
                 p.sendMessage("--------------------------------");
@@ -47,7 +47,7 @@ public class TeleportManager implements CommandExecutor {
         return true;
     }
 
-    public ArrayList<SubCommand> getSubcommands(){
+    public ArrayList<SubCommand> getSubcommands() {
         return subcommands;
     }
 

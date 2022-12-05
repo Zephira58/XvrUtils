@@ -1,8 +1,9 @@
 package ukxanthus.xvrutils;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import java.util.logging.*;
 import ukxanthus.xvrutils.commands.TeleportManager;
+
+import java.util.logging.Logger;
 
 public final class XvrUtils extends JavaPlugin {
     Logger logger = Logger.getLogger(XvrUtils.class.getName());
