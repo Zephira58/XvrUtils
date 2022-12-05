@@ -9,9 +9,10 @@ import ukxanthus.xvrutils.commands.teleportsubcommands.*;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("NullableProblems")
 public class TeleportManager implements CommandExecutor {
 
-    private ArrayList<SubCommand> subcommands = new ArrayList<>();
+    private final ArrayList<SubCommand> subcommands = new ArrayList<>();
 
     public TeleportManager() {
         subcommands.add(new RoofCommand());
@@ -19,6 +20,8 @@ public class TeleportManager implements CommandExecutor {
         subcommands.add(new CasinoCommand());
         subcommands.add(new SpawnCommand());
         subcommands.add(new WarpRoomCommand());
+        subcommands.add(new TreasuryCommand());
+        subcommands.add(new JailCommand());
     }
 
     @Override
@@ -33,7 +36,7 @@ public class TeleportManager implements CommandExecutor {
                         getSubcommands().get(i).perform(p, args);
                     }
                 }
-            } else if (args.length == 0) {
+            } else {
                 p.sendMessage(ChatColor.GREEN + "-Commands-\n");
                 for (int i = 0; i < getSubcommands().size(); i++) {
                     p.sendMessage(getSubcommands().get(i).getSyntax() + " - " + getSubcommands().get(i).getDescription());

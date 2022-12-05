@@ -25,13 +25,13 @@ public class SpawnCommand extends SubCommand {
     }
 
     public void perform(Player player, String[] args) {
-        if (player instanceof Player) {
+        if (player != null) {
             player.teleport(player.getWorld().getSpawnLocation());
             player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to spawn!");
             logger.info(props.get("PREFIX") + player.getName() + "has used the /spawn command! Teleporting to spawn...");
         } else {
             player.sendMessage("You must be a player to use this command!");
-            logger.info(props.get("PREFIX") + " A non-player has tried to use the /spawn command!");
+            logger.info(props.get("PREFIX") + " A non-player has tried to use the /warp spawn command!");
         }
     }
 }

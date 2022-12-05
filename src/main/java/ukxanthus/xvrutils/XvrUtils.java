@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import ukxanthus.xvrutils.commands.RandomTeleportCommand;
 import ukxanthus.xvrutils.commands.RulesCommand;
 import ukxanthus.xvrutils.commands.TeleportManager;
+import ukxanthus.xvrutils.commands.TeleportTab;
 
 import java.util.Objects;
 import java.util.logging.Logger;
@@ -21,7 +22,7 @@ public final class XvrUtils extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("rules")).setExecutor(new RulesCommand());
         Objects.requireNonNull(this.getCommand("rtp")).setExecutor(new RandomTeleportCommand());
         Objects.requireNonNull(this.getCommand("warp")).setExecutor(new TeleportManager());
-
+        Objects.requireNonNull(this.getCommand("warp")).setTabCompleter(new TeleportTab());
 
     }
 
