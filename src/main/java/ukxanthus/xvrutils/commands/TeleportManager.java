@@ -5,7 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import ukxanthus.xvrutils.commands.subcommands.RoofCommand;
+import ukxanthus.xvrutils.commands.teleportsubcommands.*;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,9 @@ public class TeleportManager implements CommandExecutor {
 
     public TeleportManager(){
         subcommands.add(new RoofCommand());
-
+        subcommands.add(new EndCommand());
+        subcommands.add(new CasinoCommand());
+        subcommands.add(new SpawnCommand());
     }
 
     @Override

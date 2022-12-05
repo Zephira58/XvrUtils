@@ -15,9 +15,7 @@ public final class XvrUtils extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new OnJoinRules(), this);
 
         this.getCommand("rules").setExecutor(new RulesCommand());
-        this.getCommand("spawn").setExecutor(new SpawnCommand());
         this.getCommand("rtp").setExecutor(new RandomTeleportCommand());
-
         this.getCommand("warp").setExecutor(new TeleportManager());
 
 

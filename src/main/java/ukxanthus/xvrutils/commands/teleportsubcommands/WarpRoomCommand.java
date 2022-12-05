@@ -1,4 +1,4 @@
-package ukxanthus.xvrutils.commands.subcommands;
+package ukxanthus.xvrutils.commands.teleportsubcommands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -10,17 +10,17 @@ import ukxanthus.xvrutils.commands.SubCommand;
 import java.util.Properties;
 import java.util.logging.*;
 
-public class RoofCommand extends SubCommand {
+public class WarpRoomCommand extends SubCommand {
     public String getName() {
-        return "roof";
+        return "warproom";
     }
 
     public String getDescription() {
-        return "Teleports you to the roof of the mansion";
+        return "Teleports you to the servers warp room!";
     }
 
     public String getSyntax() {
-        return "/warp roof";
+        return "/warp warproom";
     }
 
     Properties props = new Properties();
@@ -30,9 +30,9 @@ public class RoofCommand extends SubCommand {
             Location location = player.getLocation();
             World world = player.getWorld();
 
-            location.setX(188);
-            location.setY(87);
-            location.setZ(-7310);
+            location.setX(172);
+            location.setY(67);
+            location.setZ(-7295);
 
             player.teleport(location);
             player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to the roof of the mansion!");
