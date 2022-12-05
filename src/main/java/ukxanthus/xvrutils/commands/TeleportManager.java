@@ -18,6 +18,7 @@ public class TeleportManager implements CommandExecutor {
         subcommands.add(new EndCommand());
         subcommands.add(new CasinoCommand());
         subcommands.add(new SpawnCommand());
+        subcommands.add(new WarpRoomCommand());
     }
 
     @Override
