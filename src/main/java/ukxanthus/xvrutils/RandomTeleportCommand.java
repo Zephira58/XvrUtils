@@ -12,7 +12,7 @@ import java.util.Properties;
 import java.util.Random;
 import java.util.logging.*;
 
-public class CommandRandomTeleport implements CommandExecutor {
+public class RandomTeleportCommand implements CommandExecutor {
     Properties props = new Properties();
     Logger logger = Logger.getLogger(XvrUtils.class.getName());
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -31,12 +31,12 @@ public class CommandRandomTeleport implements CommandExecutor {
 
             player.teleport(location);
             player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to " + x + ", " + z);
-            logger.info(props.get("PREFIX") + sender.getName() + " has used the /rtp command! Teleporting to " + x + ", " + z);
+            logger.info(ChatColor.GREEN + "[XVR Utils]" + sender.getName() + " has used the /rtp command! Teleporting to " + x + ", " + z);
             return true;
 
         } else {
-            sender.sendMessage(ChatColor.GREEN + "[XVR Utils]" + ChatColor.RED + "You must be a player to use this command!");
-            logger.info(props.get("PREFIX") + " A non-player has tried to use the /rtp command!");
+            sender.sendMessage(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");
+            logger.info(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "A non-player has tried to use the /rtp command!");
             return false;
         }
     }

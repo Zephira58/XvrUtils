@@ -19,3 +19,7 @@ commands:
         description: Teleports you to a random location
         usage: /<command>
         permission: xvrutils.rtp
+    warp:
+        description: Teleports to various locations
+        usage: /<command> <location>
+        permission: xvrutils.prank

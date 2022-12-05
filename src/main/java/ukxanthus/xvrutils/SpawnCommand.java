@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-public class CommandSpawn implements CommandExecutor {
+public class SpawnCommand implements CommandExecutor {
     Properties props = new Properties();
     Logger logger = Logger.getLogger(XvrUtils.class.getName());
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
