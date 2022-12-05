@@ -1,4 +1,4 @@
-package ukxanthus.xvrutils.commands;
+package ukxanthus.xvrutils;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

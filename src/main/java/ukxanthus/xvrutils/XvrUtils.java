@@ -4,7 +4,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import ukxanthus.xvrutils.commands.RandomTeleportCommand;
 import ukxanthus.xvrutils.commands.RulesCommand;
 import ukxanthus.xvrutils.commands.TeleportManager;
-import ukxanthus.xvrutils.commands.TeleportTab;
 
 import java.util.Objects;
 import java.util.logging.Logger;
