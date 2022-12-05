@@ -38,7 +38,7 @@ public class TeleportManager implements CommandExecutor {
                 for (int i = 0; i < getSubcommands().size(); i++) {
                     p.sendMessage(getSubcommands().get(i).getSyntax() + " - " + getSubcommands().get(i).getDescription());
                 }
-                p.sendMessage("--------------------------------");
+                p.sendMessage(ChatColor.GREEN + "--------------------------------");
             }
 
         }
