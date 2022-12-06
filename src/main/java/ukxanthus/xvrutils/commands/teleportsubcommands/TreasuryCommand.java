@@ -3,13 +3,12 @@ package ukxanthus.xvrutils.commands.teleportsubcommands;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import ukxanthus.xvrutils.XvrUtils;
 import ukxanthus.xvrutils.commands.SubCommand;
 
 import java.util.logging.Logger;
 
 public class TreasuryCommand extends SubCommand {
-    Logger logger = Logger.getLogger(XvrUtils.class.getName());
+    Logger logger = Logger.getLogger("XvrUtils");
 
     public String getName() {
         return "treasury";
@@ -33,10 +32,10 @@ public class TreasuryCommand extends SubCommand {
 
             player.teleport(location);
             player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to the treasury!");
-            logger.info(ChatColor.GREEN + "[XVR Utils]" + player.getName() + " has used the /tp roof command! Teleporting to the treasury!");
+            logger.info("[XVR Utils]" + player.getName() + " has used the /warp treasury command! Teleporting to the treasury!");
         } else {
             player.sendMessage(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");
-            logger.info(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "A non-player has tried to use the /warp treasury command!");
+            logger.info("[XVR Utils] " + "A non-player has tried to use the /warp treasury command!");
         }
     }
 }

@@ -6,14 +6,13 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import ukxanthus.xvrutils.XvrUtils;
 
 import java.util.Random;
 import java.util.logging.Logger;
 
 @SuppressWarnings("ALL")
 public class RandomTeleportCommand implements CommandExecutor {
-    Logger logger = Logger.getLogger(XvrUtils.class.getName());
+    Logger logger = Logger.getLogger("XvrUtils");
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
@@ -30,12 +29,12 @@ public class RandomTeleportCommand implements CommandExecutor {
 
             player.teleport(location);
             player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to " + x + ", " + z);
-            logger.info(ChatColor.GREEN + "[XVR Utils]" + sender.getName() + " has used the /rtp command! Teleporting to " + x + ", " + z);
+            logger.info("[XVR Utils]" + sender.getName() + " has used the /rtp command! Teleporting to " + x + ", " + z);
             return true;
 
         } else {
             sender.sendMessage(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");
-            logger.info(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "A non-player has tried to use the /rtp command!");
+            logger.info("[XVR Utils] A non-player has tried to use the /rtp command!");
             return false;
         }
     }

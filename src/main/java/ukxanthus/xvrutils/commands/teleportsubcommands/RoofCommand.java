@@ -33,10 +33,10 @@ public class RoofCommand extends SubCommand {
 
             player.teleport(location);
             player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to the roof of the roof!");
-            logger.info(ChatColor.GREEN + "[XVR Utils]" + player.getName() + " has used the /tp roof command! Teleporting to the roof of the roof!");
+            logger.info("[XVR Utils]" + player.getName() + " has used the /warp roof command! Teleporting to the roof of the roof!");
         } else {
-            player.sendMessage(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");
-            logger.info(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "A non-player has tried to use the /warp roof command!");
+            player.sendMessage("[XVR Utils] " + "You must be a player to use this command!");
+            logger.info("[XVR Utils] " + "A non-player has tried to use the /warp roof command!");
         }
     }
 }

@@ -14,7 +14,7 @@ public final class XvrUtils extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        logger.info("XvrUtils has been enabled!");
+        logger.info("[XVR] XvrUtils has been enabled!");
 
         getServer().getPluginManager().registerEvents(new OnJoinRules(), this);
 
@@ -28,6 +28,6 @@ public final class XvrUtils extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        logger.info("XvrUtils has unloaded!");
+        logger.info("[XVR] XvrUtils has unloaded!");
     }
 }
