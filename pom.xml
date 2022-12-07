@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>uk.xanthus</groupId>
-    <artifactId>xvrUtils</artifactId>
+    <artifactId>XvrUtils</artifactId>
     <version>1.0.1</version>
     <packaging>jar</packaging>
 

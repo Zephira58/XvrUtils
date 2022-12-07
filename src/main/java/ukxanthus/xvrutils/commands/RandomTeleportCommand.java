@@ -28,7 +28,7 @@ public class RandomTeleportCommand implements CommandExecutor {
             location.setZ(z);
 
             player.teleport(location);
-            player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to " + x + ", " + z);
+            player.sendMessage(ChatColor.YELLOW + "[XVR Utils]" + ChatColor.GREEN + " You have been teleported to " + x + ", " + z);
             logger.info("[XVR Utils]" + sender.getName() + " has used the /rtp command! Teleporting to " + x + ", " + z);
             return true;
 

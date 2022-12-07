@@ -31,7 +31,7 @@ public class JailCommand extends SubCommand {
             location.setZ(-7322);
 
             player.teleport(location);
-            player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to the roof of the mansion!");
+            player.sendMessage(ChatColor.YELLOW + "[XVR Utils]" + ChatColor.GREEN + " You have been teleported to the roof of the mansion!");
             logger.info("[XVR Utils]" + player.getName() + " has used the /warp jail command! Teleporting to the jail!");
         } else {
             player.sendMessage(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");

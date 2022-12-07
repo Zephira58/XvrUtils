@@ -31,11 +31,11 @@ public class WarpRoomCommand extends SubCommand {
             location.setZ(-7295);
 
             player.teleport(location);
-            player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to the roof of the mansion!");
+            player.sendMessage(ChatColor.YELLOW + "[XVR Utils]" + ChatColor.GREEN + " You have been teleported to the roof of the mansion!");
             logger.info("[XVR Utils]" + player.getName() + " has used the /warp warprooom command! Teleporting to the warproom!");
         } else {
-            player.sendMessage(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");
-            logger.info("[XVR Utils] Anon-player has tried to use the /warp warproom command!");
+            player.sendMessage(ChatColor.YELLOW + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");
+            logger.info("[XVR Utils] A non-player has tried to use the /warp warproom command!");
         }
     }
 }

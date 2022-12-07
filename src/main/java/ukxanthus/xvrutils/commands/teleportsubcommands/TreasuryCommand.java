@@ -31,10 +31,10 @@ public class TreasuryCommand extends SubCommand {
             location.setZ(-7647);
 
             player.teleport(location);
-            player.sendMessage(ChatColor.GREEN + "[XVR Utils]" + " You have been teleported to the treasury!");
+            player.sendMessage(ChatColor.YELLOW + "[XVR Utils]" + ChatColor.GREEN + " You have been teleported to the treasury!");
             logger.info("[XVR Utils]" + player.getName() + " has used the /warp treasury command! Teleporting to the treasury!");
         } else {
-            player.sendMessage(ChatColor.GREEN + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");
+            player.sendMessage(ChatColor.YELLOW + "[XVR Utils] " + ChatColor.RED + "You must be a player to use this command!");
             logger.info("[XVR Utils] " + "A non-player has tried to use the /warp treasury command!");
         }
     }
